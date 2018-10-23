@@ -1,4 +1,4 @@
-window.webapp.func : {
+window.webapp.func = {
 	getUrlParameterByName : function(name) {
 		var url = window.location.search;
 		var name = name.replace(/[\[\]]/g, "\\$&");
