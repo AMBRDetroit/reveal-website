@@ -19,7 +19,7 @@ $(document).ready( function() {
 		website_url = prompt('Website URL to reveal:');
 	}
 	
-	if(website_url=='') {
+	if(website_url=='' || website_url == null) {
 		window.location.reload();
 	}
 	
