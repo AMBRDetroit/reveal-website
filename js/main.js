@@ -17,6 +17,8 @@ $(document).ready( function() {
 	
 	if(website_url=='') {
 		website_url = prompt('Website URL to reveal:');
+	} else {
+		website_url += window.location.hash;
 	}
 	
 	if(website_url=='' || website_url == null) {
