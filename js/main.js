@@ -1,3 +1,4 @@
+window.webapp = {};
 window.webapp.func = {
 	getUrlParameterByName : function(name) {
 		var url = window.location.search;
