@@ -45,3 +45,14 @@ video {
   right: 0;
   bottom: 0;
 }
+
+.loading-website {
+	display:none;
+	position:absolute;
+	font-size:2rem;
+	text-align:center;
+	margin-top:150px;
+	z-index:9999;
+	color:#FFF;
+	width:100%;
+}

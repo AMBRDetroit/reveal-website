@@ -1,5 +1,5 @@
 window.webapp = {};
-window.webapp.func = {
+window.webapp = {
 	getUrlParameterByName : function(name) {
 		var url = window.location.search;
 		var name = name.replace(/[\[\]]/g, "\\$&");
@@ -9,11 +9,26 @@ window.webapp.func = {
 			return "";
 		}
 		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	},
+	iframeLoaded : function() {
+		setTimeout(function() {
+			$('.loading-website').fadeOut(1000);
+			
+			$('body').on('click', {}, function(evt) {
+				vid.play();
+		
+				setTimeout(function() {
+					window.location = website_url;
+				}, 13000);
+			});
+		},1500);
 	}
 }
 
+const vid = document.getElementById("curtains");
+let website_url = webapp.getUrlParameterByName('url');
+
 $(document).ready( function() {
-	let website_url = webapp.func.getUrlParameterByName('url');
 	
 	if(website_url=='') {
 		website_url = prompt('Website URL to reveal:');
@@ -25,15 +40,7 @@ $(document).ready( function() {
 		window.location.reload();
 	}
 	
-	const vid = document.getElementById("curtains");  
+	$('.loading-website').show();	
 
-	$('.website').html('<iframe src="' + website_url + '"></iframe>');
-
-	$('body').on('click', {}, function(evt) {
-		vid.play();
-
-		setTimeout(function() {
-			window.location = website_url;
-		}, 13000);
-	})
+	$('.website').html('<iframe src="' + website_url + '" onLoad="window.webapp.iframeLoaded();"></iframe>');
 });
