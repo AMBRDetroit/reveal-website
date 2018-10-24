@@ -46,7 +46,7 @@ video {
   bottom: 0;
 }
 
-.loading-website {
+.loading-website, .helper-message {
 	display:none;
 	position:absolute;
 	font-size:2rem;

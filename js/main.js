@@ -14,6 +14,8 @@ window.webapp = {
 		setTimeout(function() {
 			$('.loading-website').fadeOut(1000);
 			
+			$('.helper-message').delay(900).fadeIn().delay(1000).fadeOut();
+			
 			$('body').on('click', {}, function(evt) {
 				$('#left, #right').fadeIn();
 				
