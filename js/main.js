@@ -15,17 +15,25 @@ window.webapp = {
 			$('.loading-website').fadeOut(1000);
 			
 			$('body').on('click', {}, function(evt) {
-				vid.play();
+				$('#left, #right').fadeIn();
+				
+				audio.play();
+				
+				setTimeout(function() {
+					$('#left, #right').fadeOut(1000);
+					vid.play();
+				}, 9000);
 		
 				setTimeout(function() {
 					window.location = website_url;
-				}, 13000);
+				}, 22000);
 			});
 		},1500);
 	}
 }
 
 const vid = document.getElementById("curtains");
+const audio = document.getElementById("launch");
 let website_url = webapp.getUrlParameterByName('url');
 
 $(document).ready( function() {

@@ -56,3 +56,62 @@ video {
 	color:#FFF;
 	width:100%;
 }
+
+
+/* Here is where the magic happens */
+html,body{
+  background-color:black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#left, #right {
+  display:none;
+  z-index:99999;
+  background-color:white;
+  height:300px;
+  width:300px;
+  position:absolute;
+  top:30%;
+  border-radius:100%;
+  filter: blur(70px);
+}
+
+#right {
+ animation:move2 5s infinite;
+  -webkit-animation: move2 5s infinite;
+}
+
+#left {
+ animation:move 5s infinite;
+  -webkit-animation: move 5s infinite;
+}
+
+@-webkit-keyframes move 
+{
+  0%, 100% {
+    left: 10%;
+    height:300px;
+  	width:300px;
+  }
+  50% {
+    left: 90%; 
+    width: 150px; 
+    height: 150px;
+  }
+}
+
+@-webkit-keyframes move2
+{
+  0%, 100% {
+    right: 10%;
+    height:300px;
+  	width:300px;
+  }
+  
+  50% {
+    right: 90%; 
+    width: 150px; 
+    height: 150px;
+  }
+}
