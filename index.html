@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Website Reveal</title>
-	<!-- A fun thing by AMBR Detroit (https://ambrdetroit.com) -->
-	<link rel="stylesheet" href="css/main.css">
+    <title>Website Reveal</title>
+    <!-- A fun thing by AMBR Detroit (https://ambrdetroit.com) - 2018 -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-	<div id="left"></div><div id="right"></div>
-	<div class="loading-website">Hold on to your seat hard, we're going to the moon baby!</div>
-	<div class="helper-message">Click anywhere when ready.</div>
-	<div class="website"></div>
-	
-	<video id="curtains" muted>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div class="loading-website">Hold on to your seat hard, we're going to the moon baby!</div>
+    <div class="helper-message">Click anywhere when ready.</div>
+    <div class="website"></div>
+
+    <video id="curtains" muted>
 		<source src="video/curtains.webm" type="video/webm">
 	</video>
-	
-	<audio id="launch">
+
+    <audio id="launch">
 		<source src="audio/launch.mp3" type="audio/mpeg">
 	</audio>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-	
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57951401-4"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-  		gtag('config', 'UA-57951401-4');
-	</script>
-	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57951401-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-57951401-4');
+    </script>
+
 </body>
+
 </html>
